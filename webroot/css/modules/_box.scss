@@ -1,0 +1,304 @@
+/* ==|====================
+   Module/Box
+   ======================= */
+
+.slideAmaItem {
+  width: 100%; @extend .altoHeroGen; padding: 0; margin: 0; position: relative; @include displayFlex(flex, column, center, center, wrap);
+  .cntDescSd {
+    width: 100%; height: auto; padding: 0; margin: 0 0 20px 0; position: relative;
+    h1, h2, h3, h4, h5, h6 { text-align: right; margin-bottom: 5px; color: $white; font-size: rem(20px); }
+    p { text-align: right; margin: 0 0 0 0; color: $white; }
+    .dividerHero {
+      width: 35%; height: 2px; position: relative; margin: 20px 0 20px auto; padding: 0; background-color: $col1;
+      &:after {
+        content: ''; width: 100%; height: 2px; @include position(absolute, 0 -100% null null); background-color: $col1;
+      }
+    }
+    a {
+      display: block; width: 180px; margin: 0 0 0 auto; font-size: rem(13px); box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    }
+  }
+}
+.boxAmaproImage {
+  width: 100%; height: auto; padding: 0; margin: 0 0 10px 0; position: relative;
+  img {
+    width: 100%; max-width: 250px; height: auto; display: block; margin: 0 auto 0 auto; padding: 0;
+  }
+  figcaption {
+    width: 100%; height: auto; text-align: center; padding: 10px 0; margin: 0 0 0 0;
+    h1, h2, h3, h4, h5, h6 { margin-bottom: 0; color: $col1; font-size: rem(20px); }
+  }
+}
+.boxCats {
+  width: 100%; height: auto; padding: 20px 0; margin: 0 0 0 0; position: relative; @include displayFlex(flex, column, center, center, wrap);
+  img {
+    width: 100%; max-width: 80px; height: auto; display: block; margin: 0 auto 0 auto; padding: 0;
+  }
+  figcaption {
+    width: 100%; height: auto; text-align: center; padding: 10px 0; margin: 0 0 0 0;
+    p { margin-bottom: 0; color: $white; font-size: rem(22px); font-weight: 300; }
+  }
+}
+.boxNumero {
+  width: auto; height: auto; padding: 20px 10px; margin: 0 0 0 0; position: relative; @include box-sizing(border-box);
+  h3 { margin-bottom: 10px; color: $col1; font-size: rem(28px); text-align: center; text-shadow: 0 0 3px rgba(0,0,0,0.25); }
+  p { margin-bottom: 0; color: $white; font-size: rem(16px); text-align: center; font-weight: 300; text-shadow: 0 0 3px rgba(0,0,0,0.25); }
+}
+.boxGan {
+  width: 100%; height: auto; padding: 0 0; margin: 0 0 10px 0; position: relative; @include box-sizing(border-box);
+  .imgGan {
+    width: 220px; height: 250px; position: relative; padding: 0; margin: 0 auto 0 auto; @include transform-style(preserve-3d); @include transform(perspective(300px));
+    video {
+      width: 160px; height: auto; @include position(absolute, 50% null null 0); z-index: 3; margin: 0; padding: 0; border: none; @include transform(translateX(0) translateY(-50%) translateZ(30px));
+    }
+    &:before, &:after {
+      content: ''; @include position(absolute, null null null null); width: 150px; height: 200px;
+    }
+    &:before {
+      top: 0; right: 0; -webkit-box-shadow: inset 0 0 0 10px $col1; box-shadow: inset 0 0 0 10px $col1; z-index: 1; @include transform(translateX(0) translateY(0) translateZ(15px));
+    }
+    &:after {
+      bottom: 0; left: 50%; background-color: $col1; -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.35); box-shadow: 0 0 10px rgba(0,0,0,0.35); z-index: 2; @include transform(translateX(-50%) translateY(0) translateZ(15px));
+    }
+  }
+  figcaption {
+    width: 100%; height: auto; padding: 0; margin: 20px 0 0 0;
+    h3 {
+      font-size: rem(16px); font-weight: 300; color: $c5; @include transition(all 0.25s); text-align: center;
+    }
+  }
+  &:hover {
+    figcaption {
+      h3 {
+        color: $black;
+      }
+    }
+  }
+}
+
+.boxDates {
+  width: 250px; height: 230px; padding: 0 0; margin: 0 0 0 0; position: relative; @include box-sizing(border-box); @include displayFlex(flex, row, flex-start, flex-start, nowrap); box-shadow: 0 5px 10px rgba(70, 29, 29, 0.25);
+  .dateCont {
+    width: 35%; height: 230px; background-color: $black; padding: 15px 0 0 0; margin: 0 0 0 0; position: relative; @include box-sizing(border-box); @include displayFlex(flex, column, flex-start, center, nowrap); overflow: hidden;
+    h2 {
+      text-align: center; color: $col1; font-size: rem(22px); line-height: 1;
+      small {
+        text-transform: uppercase; font-weight: 300;
+      }
+    }
+  }
+  .contDateDesc {
+    width: 75%; height: 230px; background-color: $c6; padding: 0 15px; margin: 0 0 0 0; position: relative; @include box-sizing(border-box); @include displayFlex(flex, column, center, center, nowrap); overflow: hidden;
+    p {
+      color: $black; font-weight: 300; font-size: rem(16px); text-align: right; margin: 0 0 0 0;
+    }
+    .btnIns {
+      width: 100%; height: auto; padding: 0; margin: 15px 0 0 0;
+      a {
+        display: block; width: 115px; margin: 0 0 0 auto; font-size: rem(13px); background-color: $black; color: $col1;
+        &:before {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.boxNominar {
+  width: 100%; height: auto; padding: 30px 15px; margin: 0 0 0 0; position: relative; overflow: hidden; background-color: $black; background-size: cover !important; background-repeat: no-repeat; background-position: center; background-image: url('#{$imgR}bgs/textura_der.png'); @include box-sizing(border-box); @include displayFlex(flex, column, center, center, nowrap);
+  p {
+    color: $col1; font-weight: 300; font-size: rem(26px); text-align: center; margin: 0 0 5px 0; line-height: 1;
+  }
+  h2 {
+    color: $col1; font-size: rem(32px); text-align: center; margin: 0 0 10px 0;
+  }
+  .btnNominar {
+    width: 100%; height: auto; padding: 0; margin: 0 0 10px 0;
+    a {
+      display: block; width: 115px; margin: 0 auto 0 auto; font-size: rem(14px); text-transform: uppercase;
+    }
+  }
+  .bgnAll {
+    width: 100%; height: auto; padding: 0; margin: 0 0 0 0; text-align: center;
+    a {
+      text-decoration: none; color: $col1; @include transition(all 300ms ease);
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+.boxJurado {
+  width: 100%; height: 500px; padding: 20px 0 20px 0; margin: 0 0 0 0; position: relative; overflow: hidden; background-color: $c4; background-size: cover !important; background-repeat: no-repeat; background-position: center; background-image: url('#{$imgR}bgs/textura_nomina.svg'); @include box-sizing(border-box); @include displayFlex(flex, column, center, center, nowrap);
+}
+
+.boxCard {
+  width: 300px; height: 350px; padding: 0; margin: 0 auto; position: relative; overflow: hidden; @include displayFlex(flex, column, center, center, wrap);
+  .juradoImg {
+    width: 100px; height: 100px; margin: 0 auto 10px auto; position: relative; border: 2px solid $col1; border-radius: 4px; @include box-sizing(border-box); z-index: 2;
+    .boximg {
+      width: 100%; height: 100%; padding: 0; margin: 0; overflow: hidden; @include position(absolute, 0 null null 0); z-index: 1;
+      img {
+        display: block; width: 100%; min-width: 300px; height: auto; padding: 0; margin: 0; @include position(absolute, 50% null null 50%); @include transform(translate(-50%, -50%));
+      }
+    }
+    [class^="flag-"] {
+      width: 40px; height: 40px; @include position(absolute, null -16px -16px null); background-repeat: no-repeat; background-size: 100%; background-position: center; z-index: 2
+    }
+  }
+  figcaption {
+    width: 100%; height: auto; padding: 0 20px; margin: 0 0 0 0; position: relative; z-index: 2;
+    h2 {
+      color: $black; font-size: rem(22px); margin: 0 0 10px 0; font-weight: 700; text-align: center;
+    }
+    h4 {
+      color: $black; font-size: rem(17px); margin: 0 0 10px 0; font-weight: 300; letter-spacing: 2px; text-align: center;
+    }
+    p {
+      color: $black; font-size: rem(16px); margin: 0 0 0 0; text-align: center;
+    }
+  }
+  &:before, &:after {
+    content: ''; width: 100%; @include position(absolute, null null null 0); z-index: 1;
+  }
+  &:before {
+    top: 0; height: 25%; background-color: $black;
+  }
+  &:after {
+    bottom: 0; height: 75%; background-color: $white;
+  }
+}
+
+.contSlideWr {
+  width: 100%; height: auto; padding: 0 20px; margin: 0; position: relative; @include displayFlex(flex, row, center, center, nowrap); @include box-sizing(border-box);
+  .slider-nav-thumbnails {
+    figure {
+      width: 125px; height: 125px; padding: 0; margin: 0 auto 0 auto; position: relative; overflow: hidden; display: block;
+      img {
+        width: 100%; min-width: 150px; height: auto; @include position(absolute, 50% null null 50%); @include transform(translate(-50%, -50%));
+      }
+    }
+    .slick-slide {
+      width: 100% !important;
+    }
+    .slick-track {
+      width: 300px !important; @include displayFlex(flex, column, flex-start, flex-start, wrap);
+      margin-top: 0;
+    }
+  }
+  .slick-slider{
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+  }
+  .slick-slider .slick-list {
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    transform: none !important;
+  }
+  .slick-slide{
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+
+}
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 576px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+  .slideAmaItem {
+    .cntDescSd {
+      h1, h2, h3, h4, h5, h6 { font-size: rem(28px); }
+    }
+  }
+  .boxCats {
+    height: 220px; padding: 0 0;
+  }
+  .boxNumero {
+    h3 { font-size: rem(60px); }
+    p { font-size: rem(30px); }
+  }
+  .boxDates {
+    width: 300px; height: 250px;
+    .dateCont {
+      width: 35%; height: 250px;
+      h2 {
+        font-size: rem(28px);
+      }
+    }
+    .contDateDesc {
+      width: 75%; height: 250px;
+      p {
+        font-size: rem(22px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .slideAmaItem {
+    .cntDescSd {
+      h1, h2, h3, h4, h5, h6 { font-size: rem(30px); }
+    }
+  }
+  .boxAmaproImage {
+    margin: 0 0 0 0;
+    img {
+      margin: 0 0 0 auto;
+    }
+    figcaption {
+      text-align: right;
+    }
+  }
+  .boxCats {
+    height: 220px;
+  }
+  .boxNominar {
+    width: 40vw; height: 500px; padding: 0 15px;
+  }
+  .boxJurado {
+    width: 60vw; height: 500px;
+  }
+  .boxDates {
+    width: 350px; height: 300px;
+    .dateCont {
+      width: 35%; height: 300px;
+      h2 {
+        font-size: rem(36px);
+      }
+    }
+    .contDateDesc {
+      width: 75%; height: 300px;
+      p {
+        font-size: rem(22px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .slideAmaItem {
+    .cntDescSd {
+      h1, h2, h3, h4, h5, h6 { font-size: rem(36px); }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .boxCats {
+    height: 350px;
+  }
+}

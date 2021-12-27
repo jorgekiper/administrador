@@ -1,0 +1,83 @@
+/* ===========================
+   Base
+   =========================== */
+
+body {
+  background-color: $black;
+  font-family: $mont;
+  font-family: 400;
+  color: $white;
+}
+
+a {
+  color: $white;
+  &:hover {
+    @include transition(all 0.25s); text-decoration: none; color: #eaeaea;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $mont; font-weight: 700;
+}
+
+video::-webkit-media-controls {
+    display:none !important;
+}
+
+.parallax-background {
+  // background-image: url('http://placekitten.com/1000/1000');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  -moz-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+@media only screen and (min-width: 360px) {
+
+}
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 576px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .parallax-background {
+    -webkit-background-size: inherit;
+    background-size: inherit;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+}
+
+@include keyframes(button) {
+  0% {
+    opacity: 0;
+    @include transform(translate(-50px, 0px) skewX(-50deg)); width: 10%;
+  }
+  50% {
+    opacity: 1;
+    @include transform(translate(0, 0px) skewX(-50deg)); width: 100%;
+  }
+  100% {
+    opacity: 0;
+    @include transform(translate(300%, 0px) skewX(-50deg)); width: 50%;
+  }
+}

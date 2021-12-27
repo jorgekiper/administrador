@@ -1,0 +1,65 @@
+/* ==|====================
+   Layout/Footer
+   ======================= */
+
+.g-footer {
+  width: 100%; height: auto; @include position(relative, null null null null); padding: 20px 0; margin: 0; z-index: 2; background-color: $black;
+}
+.navFooter {
+  width: 100%; height: auto; padding: 0; margin: 0 0 10px 0;
+  ul {
+    list-style-type: none; width: 100%; height: auto; padding: 0; margin: 0; @include displayFlex(flex, column, flex-start, flex-start, wrap);
+    li {
+      list-style-type: none; margin-bottom: 2px;
+      a {
+        color: $white; font-size: rem(14px); @include transition(all 300ms ease); margin: 0; padding: 0;
+        &:hover {
+          color: $col1;
+        }
+      }
+    }
+  }
+}
+.direccion {
+  width: 100%; height: auto; padding: 0; margin: 0 0 10px 0;
+  p {
+    text-align: right; color: $col1; margin: 0 0 10px 0; padding: 0; font-size: rem(16px); font-weight: 300;
+  }
+  .socialesFooter {
+    width: 100%; height: auto; padding: 0; margin: 0 0 0 0; @include displayFlex(flex, row, flex-end, center, wrap);
+    a {
+      width: 30px; height: 30px; display: block; margin: 0 0 0 0; text-align: center; line-height: 30px; color: $white; font-size: rem(18px); @include transition(all 0.25s);
+      &:hover {
+        color: $col1;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) {
+
+}
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 576px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+  
+}
+
+@media only screen and (min-width: 1024px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+}

@@ -1,0 +1,86 @@
+/* ==|====================
+   Modules/Inputs
+   ======================= */
+
+  form {
+    label { font-size: rem(14px); }
+    button {
+      width: auto; height: 45px; padding: 0 25px; margin: 0 0 0 0; text-transform: uppercase; text-align: center; color: $white; display: inline-block; border: 1px solid $white; @include box-sizing(border-box); line-height: 40px; font-size: rem(13px); cursor: pointer; font-family: $mont; position: relative; overflow: hidden; border-radius: 2px;
+      &:after {
+        content: ''; width: 50px; height: 100%; background-color: rgba(255,255,255,0.15); @include position(absolute, null null 0 -50px); z-index: 1; @include transform-origin(-50% -50%);
+      }
+      &:hover {
+        &:after {
+          @include animation(button 0.75s ease alternate backwards);
+        }
+      }
+    }
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .CheckStyle {
+    position: absolute; opacity: 0;
+    & ~ label {
+      position: relative; cursor: pointer; padding: 0;
+    }
+    & ~ label:before {
+      content: ''; margin-right: 10px; display: inline-block; vertical-align: text-top; width: 20px; height: 20px; background: transparent; border: solid $white 1px; @include box-sizing(border-box); @include transition(all 0.25s ease);
+    }
+    &:hover ~ label:before {
+      background: rgba(255,255,255,0.35);
+    }
+    &:focus ~ label:before {
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+    }
+    &:checked ~ label:before {
+      background: rgba(255,255,255,0.10);
+    }
+    &:disabled ~ label {
+      color: #b8b8b8;
+      cursor: auto;
+    }
+    &:disabled ~ label:before {
+      box-shadow: none;
+      background: #ddd;
+    }
+    &:checked ~ label:after {
+      content: ''; position: absolute; left: 4px; top: 4px; background: white; width: 12px; height: 12px;
+    }
+  }
+  .inpLay {
+    position: relative;
+    div.error-inp {
+      width: auto; height: auto; background-color: $c2; color: $white; @include position(absolute, 0 0 null null); @include transform(translateX(100%));
+    }
+  }
+  
+  @media only screen and (min-width: 360px) {
+  
+  }
+  
+  @media only screen and (min-width: 480px) {
+  
+  }
+  
+  @media only screen and (min-width: 576px) {
+  
+  }
+  
+  @media only screen and (min-width: 768px) {
+  
+  }
+  
+  @media only screen and (min-width: 992px) {
+  
+  }
+  
+  @media only screen and (min-width: 1024px) {
+  
+  }
+  
+  @media only screen and (min-width: 1200px) {
+  
+  }
